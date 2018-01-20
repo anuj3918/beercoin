@@ -21,7 +21,6 @@ const initHttpServer = ( myHttpPort: number ) => {
     });
     app.post('/mineBlock', (req, res) => {
         const newBlock: Block = generateNextBlock(req.body.data);
-        addBlockToChain(newBlock);
         console.log("New block added to blockchain");
         res.send(newBlock);
     });

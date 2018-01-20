@@ -12,6 +12,8 @@ const isValidTimestamp = (newBlock: Block, previousBlock: Block): boolean => {
 
 const isValidNewBlock = (newBlock: Block, previousBlock: Block) => {
     if (previousBlock.index + 1 !== newBlock.index) {
+        console.log(previousBlock);
+        console.log(newBlock);
         console.log('invalid index');
         return false;
     } else if (previousBlock.hash !== newBlock.previousHash) {

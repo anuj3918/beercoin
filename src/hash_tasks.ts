@@ -1,5 +1,6 @@
 import * as CryptoJS from 'crypto-js'
 import {hexToBinary} from './utils'
+import {Block} from './block'
 
 
 const calculateHash = (index: number, previousHash: string, timestamp: number, data: string,

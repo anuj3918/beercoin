@@ -11,6 +11,8 @@ const isValidTimestamp = (newBlock, previousBlock) => {
 exports.isValidTimestamp = isValidTimestamp;
 const isValidNewBlock = (newBlock, previousBlock) => {
     if (previousBlock.index + 1 !== newBlock.index) {
+        console.log(previousBlock);
+        console.log(newBlock);
         console.log('invalid index');
         return false;
     }
